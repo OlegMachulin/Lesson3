@@ -78,13 +78,14 @@ namespace Lesson3
             int n = int.Parse(Console.ReadLine());
             bool prime = false;
             int i = 2;
-            while (i <= n)
+            while (i <= n-1)
             {
                 if (n % i == 0)
+                {    
                     prime = true;
-                else if (i > n)
                     break;
-                i = i + i;
+                }
+                i++;
             }
             if (prime == false)
                 Console.WriteLine("This is a prime number");
